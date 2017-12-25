@@ -1,0 +1,43 @@
+*,
+::before,
+::after{
+	margin: 0;
+	padding: 0;
+
+	-webkit-tap-highlight-color: transparent;/*清除点击默认高亮效果*/
+
+	-webkit-box-sizing: border-box;/*从边框开始算宽度*/
+}
+body{
+	font-size: 14px;
+	font-family: "Microsoft YaHei",sans-serif;/*sans-serif是手机默认字体*/
+	color: #000;
+	background-color: #f9f9f9;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #000;
+	cursor: pointer;
+}
+input,textarea{
+	border: none;
+	resize: none;
+	outline: none;/*清除选中的高亮蓝色框*/
+
+	-webkit-appearance: none;/*清除浏览器默认效果*/
+}
+
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after{
+	content: "";
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+	clear: both;
+}
+@maincolor:#b4282d;

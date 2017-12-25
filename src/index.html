@@ -2,11 +2,81 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 	<title>豆瓣电影</title>
 	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body ng-app="douban">
-	<p ng-controller="doubanController">{{text}}</p>
+	<div class="container">
+		<!-- 头部 -->
+		<header class="header">
+			<div class="header-box">
+				<h1>豆瓣电影</h1>
+			</div>
+		</header>
+		<!-- 轮播图 -->
+		<section class="banner">
+			<!-- banner图片 -->
+			<ul class="banner-img clearfix">
+				<li><img src="images/ymz.jpg"></li>
+				<li><img src="images/fh.jpg"></li>
+			</ul>
+			<!-- 聚焦圆点 -->
+			<ul class="focus-btn">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</section>
+		<!-- 榜单 -->
+		<section class="rankinglist">
+			<div class="list-item in_theaters">
+				<a href="#/in_theaters">
+					<span>正在热映</span>
+					<i class="fa fa-chevron-right"></i>
+				</a>
+			</div>
+			<div class="list-item coming_soon">
+				<a href="#/coming_soon">
+					<span>即将上映</span>
+					<i class="fa fa-chevron-right"></i>
+				</a>
+			</div>
+			<div class="list-item top250">
+				<a href="#/top250">
+					<span>TOP250</span>
+					<i class="fa fa-chevron-right"></i>
+				</a>
+			</div>
+			<div class="list-item us_box">
+				<a href="#/us_box">
+					<span>北美票房榜</span>
+					<i class="fa fa-chevron-right"></i>
+				</a>
+			</div>
+		</section>
+		<!-- 尾部 -->
+		<footer class="footer">
+			<div class="footer-box">
+				<!-- 搜索菜单 -->
+				<div class="menu menu-search">
+					<a href="search.html"><i class="fa fa-search"></i><span>搜索</span></a>
+				</div>
+				<!-- 榜单菜单 -->
+				<div class="menu menu-rankinglist">
+					<a href="#/" class="active"><i class="fa fa-tv"></i><span>榜单</span></a>
+				</div>
+				<!-- 关于我菜单 -->
+				<div class="menu menu-aboutme">
+					<a href="#/about"><i class="fa fa-user-o"></i><span>我的</span></a>
+				</div>
+			</div>
+		</footer>
+	</div>
 	<script src="js/npm.min.js"></script>
 	<script src="js/app.js"></script>
 </body>
