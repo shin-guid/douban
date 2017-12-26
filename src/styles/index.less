@@ -1,123 +1,58 @@
 @import "base.less";
-.container{
-	min-width: 300px;
-	max-width: 640px;
+
+.banner{
+	width: 99%;
+	position: relative;
+	overflow: hidden;
 	margin: 0 auto;
-	.header{
-		width: 100%;
-		height: 45px;
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 999;
-		.header-box{
-			max-width: 640px;
-			min-width: 300px;
-			margin: 0 auto;
-			background: url(../images/header-bg.png);
-			background-size: 1px 44px; 
-			border-bottom: 1px solid #e0e0e0;
-			h1{
-				height: 100%;
-				font-size: 16px;
-				line-height: 44px;
-				text-align: center;
-				font-weight: 600;
-				color: #666;
-			}
-		}	
-	}
-	.banner{
-		width: 99%;
-		position: relative;
-		overflow: hidden;
-		margin: 0 auto;
-		margin-top: 50px;
-		.banner-img{
-			width: 200%;
-			li{
-				width: 50%;
-				float: left;
-			}
-			img{
-				width: 100%;
-			}
+	margin-top: 50px;
+	.banner-img{
+		width: 200%;
+		li{
+			width: 50%;
+			float: left;
 		}
-		.focus-btn{
-			position: absolute;
-			bottom: 10px;
-			left: 50%;
-			margin-left: -48px;
-			li{
-				width: 6px;
-				height: 6px;
-				border: 1px solid #fff;
-				float: left;
-				margin: 5px;
-				border-radius: 50%;
-			}
-			li.active{
-				background-color: @maincolor;
-			}
-		}
-	}
-	.rankinglist{
-		width: 100%;
-		padding: 30px 20px 20px 20px;
-		.list-item{
+		img{
 			width: 100%;
-			height: 70px;
-			border: 1px solid #e0e0e0;
-			line-height: 70px;
-			margin-bottom: 15px;
-			font-size: 18px;
-			padding: 0 15px;
-			background-color: #fff;
-			span{
-
-			}
-			i{
-				float: right;
-				color: #999;
-				margin-top: 26px;
-			}
 		}
 	}
-	.footer{
-		width: 100%;
-		height: 50px;
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		.footer-box{
-			max-width: 640px;
-			min-width: 300px;
-			height: 100%;
-			margin: 0 auto;
-			background-color: #eee;
-			display: flex;
-			.menu{
-				width: 33.3333333%;
-				height: 100%;
-				a{
-					height: 100%;
-					display: block;
-					width: 60px;
-					height: 100%;
-					margin: 0 auto;
-					text-align: center;
-					padding-top: 8px;
-					i{
-						display: block;
-						margin-bottom: 2px;
-						font-size: 18px;
-					}
-				}
-				a.active{
-					color: @maincolor;
-				}
-			}
-		}	
+	.focus-btn{
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		margin-left: -48px;
+		li{
+			width: 6px;
+			height: 6px;
+			border: 1px solid #fff;
+			float: left;
+			margin: 5px;
+			border-radius: 50%;
+		}
+		li.active{
+			background-color: @maincolor;
+		}
 	}
+}
+.rankinglist{
+	width: 100%;
+	padding: 30px 20px 20px 20px;
+	.list-item{
+		width: 100%;
+		height: 70px;
+		border: 1px solid #e0e0e0;
+		line-height: 70px;
+		margin-bottom: 15px;
+		font-size: 18px;
+		padding: 0 15px;
+		background-color: #fff;
+		span{
 
+		}
+		i{
+			float: right;
+			color: #999;
+			margin-top: 26px;
+		}
+	}
 }
