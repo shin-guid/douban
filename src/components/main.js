@@ -6,7 +6,7 @@ var douban = angular.module('douban',[
 	'douban.movie_list',
 	'douban.details',
 	'douban.search',
-	'douban.us_box'
+	'douban.us_box',
 	]);
 // 配置路由
 douban.config(['$routeProvider',function($routeProvider){
@@ -32,6 +32,16 @@ douban.config(['$routeProvider',function($routeProvider){
 			.otherwise({redirectTo:'/index'})
 		}]);
 // 控制器
-douban.controller('doubanController',['$scope','HttpService',function($scope,HttpService){
-		
+douban.controller('doubanController',['$scope','$location',function($scope,$location){
+		// 底部导航切换
+		$scope.$local = $location;
+		$scope.$watch('$local.path()',function(now,old){
+			if(now == '/about'){
+				$scope.path = 'about';
+			}else if(now == '/search' || now.startsWith('/details') && old == '/search'){
+				$scope.path = 'search';
+			}else{
+				$scope.path = 'index';
+			}
+		})
 }])

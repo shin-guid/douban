@@ -3,8 +3,8 @@
 	<div class="search-top-box">
 		<div class="search-top">
 			<form ng-submit="search()">
-				<input type="text" name="" placeholder="请在此处输入搜索内容" ng-model="searchText" ng-focus="show='true'" ng-blur="show='false'">
-				<input class="btn-search" type="button" value="搜索" ng-show="show=='true'" ng-click="search()">
+				<input type="text" name="" placeholder="请在此处输入搜索内容" ng-model="searchText" ng-focus="show()" ng-blur="hide()">
+				<input class="btn-search" type="button" value="搜索" ng-show="showbtn == true" ng-click="search($event)">
 			</form>
 		</div>				
 	</div>
@@ -28,7 +28,8 @@
 				</a>
 			</li>
 		</ul>
-		<p class="msg">没有更多内容了</p>
+		<!-- 页码 -->
+		<ul class="pagination" id="pagination"></ul>
 		<div class="sk-folding-cube" ng-if="loading">
 			<div class="sk-cube1 sk-cube"></div>
 			<div class="sk-cube2 sk-cube"></div>

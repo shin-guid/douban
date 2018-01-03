@@ -8,7 +8,7 @@
 <section class="list">
 	<ul class="result-list">
 		<li class="clearfix" ng-repeat="item in data.subjects">
-			<a href="details.html">
+			<a href="#!/details/{{item.subject.id}}">
 				<img ng-src="{{item.subject.images.small}}" alt="{{item.subject.title}}">
 				<div class="info">
 					<div class="title">{{item.subject.title}}({{item.subject.year}})</div>
@@ -24,5 +24,4 @@
 			</a>
 		</li>
 	</ul>
-	<p class="msg">没有更多内容了</p>
 </section>

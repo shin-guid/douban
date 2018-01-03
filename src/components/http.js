@@ -7,7 +7,10 @@ var http = angular.module('douban.services.http',[])
 			var fnSuffix = Math.random().toString().replace('.','');
 			// 回调函数名
 			var cbFuncName = 'json_cb' + fnSuffix;
-			$window[cbFuncName] = callback;
+			$window[cbFuncName] = function(data){
+				callback(data);
+				$document[0].body.removeChild(script);
+			};
 			var queryString = (url.indexOf('?')== -1) ? '?' : '';
 			for(var key in data){
 				queryString += key + '=' + data[key] + '&';
