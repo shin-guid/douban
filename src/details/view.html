@@ -3,7 +3,7 @@
 	<header class="header">
 		<div class="header-box clearfix">
 			<a class="btn-back" ng-click="back()"><i class="fa fa-chevron-left"></i></a>
-			<h1>{{data.title}}</h1>
+			<h1>{{title}}</h1>
 		</div>
 	</header>
 	<!-- 电影详情 -->
@@ -27,4 +27,22 @@
 			<p>{{data.summary}}</p>
 		</div>
 	</section>
+	<!-- 加载遮罩 -->
+	<div class="mask" ng-if="loading == true">
+		<div class="sk-circle">
+			<div class="sk-circle1 sk-child"></div>
+			<div class="sk-circle2 sk-child"></div>
+			<div class="sk-circle3 sk-child"></div>
+			<div class="sk-circle4 sk-child"></div>
+			<div class="sk-circle5 sk-child"></div>
+			<div class="sk-circle6 sk-child"></div>
+			<div class="sk-circle7 sk-child"></div>
+			<div class="sk-circle8 sk-child"></div>
+			<div class="sk-circle9 sk-child"></div>
+			<div class="sk-circle10 sk-child"></div>
+			<div class="sk-circle11 sk-child"></div>
+			<div class="sk-circle12 sk-child"></div>
+		</div>
+	</div>
 </div>
+

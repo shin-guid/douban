@@ -13,10 +13,10 @@ angular.module('douban.search',['douban.services.http','douban.services.paginati
 	var count = 10;
 	var start = count * ($scope.currentPage - 1);
 	$scope.search = function($event){
+		$scope.loading = true;
 		if(that.stopPropagation){
 			$event.stopPropagation();
 		}
-		$scope.loading = true;
 		HttpService.jsonp('http://api.douban.com/v2/movie/search',
 			{
 				q : '{'+ $scope.searchText +'}',
