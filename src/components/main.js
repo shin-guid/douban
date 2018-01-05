@@ -21,13 +21,13 @@ douban.config(['$routeProvider',function($routeProvider){
 				templateUrl:'/views/us_box/view.html',
 				controller: 'usBoxController'
 			})
-			.when('/:category',{
-				templateUrl:'/views/movie_list/view.html',
-				controller: 'movieListController'
-			})
 			.when('/details/:id',{
 				templateUrl:'/views/details/view.html',
 				controller: 'detailsController'
+			})
+			.when('/:category/:page',{
+				templateUrl:'/views/movie_list/view.html',
+				controller: 'movieListController'
 			})
 			.otherwise({redirectTo:'/index'})
 		}]);

@@ -8,8 +8,13 @@ page.service('Pagination',['$compile','$document',function($compile,$document){
 		var end = start + show;
 		end = end > total ? (total + 1) : end;
 		var str = '';
-		str += '<li ng-click="currentPage=1">首页</li>';
-		str += '<li ng-click="currentPage=currentPage-1"><i class="fa fa-arrow-left"></i></li>';
+		if(currentpage == 1){
+			str += '<li class="disabled">首页</li>';
+			str += '<li class="disabled"><i class="fa fa-arrow-left"></i></li>';
+		}else{
+			str += '<li ng-click="currentPage=1">首页</li>';
+			str += '<li ng-click="currentPage=currentPage-1"><i class="fa fa-arrow-left"></i></li>';
+		}
 		for(var i = start; i < end; i++){
 			if(i == currentpage){
 				str += '<li class="current" ng-click="getpage($event)">'+ i +'</li>'
@@ -17,9 +22,13 @@ page.service('Pagination',['$compile','$document',function($compile,$document){
 				str += '<li ng-click="getpage($event)">'+ i +'</li>'
 			}
 		}
-		str += '<li ng-click="currentPage=currentPage+1"><i class="fa fa-arrow-right"></i></li>';
-		str += '<li ng-click="currentPage=total">末页</li>';
-		// str = "'" + str + "'"
+		if(currentpage == total){
+			str += '<li class="disabled"><i class="fa fa-arrow-right"></i></li>';
+			str += '<li class="disabled">末页</li>';
+		}else{
+			str += '<li ng-click="currentPage=currentPage+1"><i class="fa fa-arrow-right"></i></li>';
+			str += '<li ng-click="currentPage=total">末页</li>';
+		}
 		var $html = $compile(str)($scope);
 		var ul = $document[0].getElementById('pagination');
 		ul.innerHTML = '';
