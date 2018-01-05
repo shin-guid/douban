@@ -77,7 +77,7 @@ gulp.task('html',function() {
 	.pipe(reload({
 		stream: true
 	}));
-	gulp.src('src/**/*.html')
+	gulp.src(['src/**/*.html','!src/index.html'])
 	.pipe(htmlmin({collapseWhitespace: true}))
 	.pipe(gulp.dest('dist/views'))
 	.pipe(reload({
@@ -98,7 +98,7 @@ gulp.task('myServer',function() {
 
 	gulp.watch('src/styles/*.less',['style']);
 	gulp.watch('src/**/*.js',['script']);
-	gulp.watch('src/*.html',['html']);
+	gulp.watch('src/**/*.html',['html']);
 	gulp.watch('src/images/*.*', ['image']);
 });
 
