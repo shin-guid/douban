@@ -7,11 +7,15 @@ var douban = angular.module('douban',[
 	'douban.details',
 	'douban.search',
 	'douban.us_box',
+	'douban.slider'
 	]);
 // 配置路由
 douban.config(['$routeProvider',function($routeProvider){
 			$routeProvider
-			.when('/index',{templateUrl:'/views/index/view.html'})
+			.when('/index',{
+				templateUrl:'/views/index/view.html',
+				controller: 'sliderController'
+				})
 			.when('/search',{
 				templateUrl:'/views/search/view.html',
 				controller: 'searchController'

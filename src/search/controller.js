@@ -33,7 +33,6 @@ angular.module('douban.search',['douban.services.http','douban.services.paginati
 
 	}
 	$scope.$watch('currentPage',function(now,old){
-		console.log(now);
 		if(now !== old){
 			start = count * ($scope.currentPage - 1);
 			HttpService.jsonp('http://api.douban.com/v2/movie/search',
