@@ -16,4 +16,7 @@ angular.module('douban.details',['douban.services.http'])
 	   			}
 	   			$scope.$apply();
 	   		})
+	   		$scope.back = function(){
+			history.back();
+		}	
 	   }])

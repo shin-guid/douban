@@ -5,4 +5,7 @@ angular.module('douban.us_box',['douban.services.http'])
 	   			$scope.data = res;
 	   			$scope.$apply();
 	   		})
+	   		$scope.back = function(){
+			history.back();
+		}	
 	   }])

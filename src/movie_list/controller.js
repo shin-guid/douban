@@ -24,5 +24,8 @@ angular.module('douban.movie_list',['ngRoute','douban.services.http','douban.ser
 		})
 		$scope.getpage = function($event){
 			$scope.currentPage = parseInt($event.target.innerHTML)
+		}
+		$scope.back = function(){
+			history.back();
 		}			
 	}])

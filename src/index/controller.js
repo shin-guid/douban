@@ -2,7 +2,7 @@ angular.module('douban.slider',[])
 .controller('sliderController',['$scope','$interval',function($scope,$interval){
 	var img = document.getElementsByClassName('banner-img')[0];
 	var points = document.getElementsByClassName('focus-btn')[0].children;
-	var index = 0;
+	var index = 1;
 	var width = img.offsetWidth;
 	// 添加过渡
 	function addTransition(){
