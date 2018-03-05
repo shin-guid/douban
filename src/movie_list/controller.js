@@ -13,7 +13,7 @@ angular.module('douban.movie_list',['ngRoute','douban.services.http','douban.ser
 		$scope.currentPage = parseInt($routeParams.page);
 		var count = 10;
 		var start = count * ($scope.currentPage - 1);
-		HttpService.jsonp('http://api.douban.com/v2/movie/'+ $routeParams.category,
+		HttpService.jsonp('https://api.douban.com/v2/movie/'+ $routeParams.category,
 			{count:count,start:start},
 			function(res){
 			$scope.data = res;

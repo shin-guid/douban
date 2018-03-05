@@ -17,7 +17,7 @@ angular.module('douban.search',['douban.services.http','douban.services.paginati
 		if(that.stopPropagation){
 			$event.stopPropagation();
 		}
-		HttpService.jsonp('http://api.douban.com/v2/movie/search',
+		HttpService.jsonp('https://api.douban.com/v2/movie/search',
 			{
 				q : '{'+ $scope.searchText +'}',
 				count: count,

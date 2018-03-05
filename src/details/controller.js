@@ -10,7 +10,7 @@ angular.module('douban.details',['douban.services.http'])
 	   		var detailsUrl = $location.$$url;
 	   		var id = detailsUrl.replace('/details/','');
 	   		// jsonp请求
-	   		HttpService.jsonp('http://api.douban.com/v2/movie/subject/'+id,{},function(res){
+	   		HttpService.jsonp('https://api.douban.com/v2/movie/subject/'+id,{},function(res){
 	   			$scope.data = res;
 	   			$scope.title = res.title;
 	   			$scope.bgImage = res.images.large;
